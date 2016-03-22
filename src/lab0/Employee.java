@@ -44,7 +44,7 @@ public class Employee {
     }
 
     public void setDaysVacation(int daysVacation) {
-         if (daysVacation <= 1) {
+         if (daysVacation >= 1 || daysVacation <= MAX_VACATION_DAYS) {
             // String is a magic number, should be a constant!
             throw new IllegalArgumentException("vacationDays is a required field");
         }
